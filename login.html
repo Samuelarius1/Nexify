@@ -1,0 +1,136 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="styles/login.css" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+		<title>Login/Register - Nexify</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<img src="images/Nexify (2).png" alt="logo" class="logo" />
+				Nexify
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="products.html">Products</a></li>
+					<li><a href="login.html">Login/Register</a></li>
+					<li><a href="cart.html">Cart</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="auth-container">
+			<div class="form-container">
+				<!-- Logo inside the form -->
+				<div class="form-header">
+					<img src="images/nexify.png" alt="E-Shop Logo" />
+				</div>
+				<div class="toggle-btns">
+					<button id="login-btn" class="active">Login</button>
+					<button id="register-btn">Register</button>
+				</div>
+
+				<form id="login-form" class="auth-form active">
+					<h2>Login to Your Account</h2>
+					<div class="input-icon">
+						<i class="fas fa-envelope"></i>
+						<input type="email" placeholder="Email" required />
+					</div>
+					<div class="input-icon">
+						<i class="fas fa-lock"></i>
+						<input type="password" placeholder="Password" required />
+					</div>
+					<button type="submit">Login</button>
+					<p class="form-footer">
+						Don't have an account?
+						<span id="switch-to-register">Register here</span>
+					</p>
+				</form>
+
+				<form id="register-form" class="auth-form hidden">
+					<h2>Create an Account</h2>
+					<div class="input-icon">
+						<i class="fas fa-user"></i>
+						<input type="text" placeholder="Full Name" required />
+					</div>
+					<div class="input-icon">
+						<i class="fas fa-envelope"></i>
+						<input type="email" placeholder="Email" required />
+					</div>
+					<div class="input-icon">
+						<i class="fas fa-phone"></i>
+						<input type="tel" placeholder="Phone Number" required />
+					</div>
+					<div class="input-icon">
+						<i class="fas fa-map-marker-alt"></i>
+						<input type="text" placeholder="Address" required />
+					</div>
+					<div class="input-icon">
+						<i class="fas fa-globe"></i>
+						<select required>
+							<option value="">Select Country</option>
+							<option value="UG">Uganda</option>
+							<option value="KE">Kenya</option>
+							<option value="TZ">Tanzania</option>
+							<!-- Add more countries as needed -->
+						</select>
+					</div>
+					<div class="input-icon">
+						<i class="fas fa-lock"></i>
+						<input type="password" placeholder="Password" required />
+					</div>
+					<button type="submit">Register</button>
+					<p class="form-footer">
+						Already have an account?
+						<span id="switch-to-login">Login here</span>
+					</p>
+				</form>
+			</div>
+		</section>
+
+		<footer></footer>
+
+		<script>
+			const loginBtn = document.getElementById("login-btn");
+			const registerBtn = document.getElementById("register-btn");
+			const loginForm = document.getElementById("login-form");
+			const registerForm = document.getElementById("register-form");
+			const switchToRegister = document.getElementById("switch-to-register");
+			const switchToLogin = document.getElementById("switch-to-login");
+
+			// Toggle between login and register forms
+			loginBtn.addEventListener("click", () => {
+				loginForm.classList.add("active");
+				registerForm.classList.remove("active");
+				loginBtn.classList.add("active");
+				registerBtn.classList.remove("active");
+			});
+
+			registerBtn.addEventListener("click", () => {
+				registerForm.classList.add("active");
+				loginForm.classList.remove("active");
+				registerBtn.classList.add("active");
+				loginBtn.classList.remove("active");
+			});
+
+			switchToRegister.addEventListener("click", () => {
+				registerBtn.click();
+			});
+
+			switchToLogin.addEventListener("click", () => {
+				loginBtn.click();
+			});
+		</script>
+	</body>
+</html>

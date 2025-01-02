@@ -1,0 +1,211 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+			rel="stylesheet" />
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Product Details - E-Shop</title>
+		<style>
+			/**
+            * Product Details Page Styles
+            *
+            * @format
+            */
+
+			.product-details-container {
+				display: flex;
+				padding: 40px;
+				justify-content: space-around;
+				align-items: flex-start;
+			}
+
+			.product-image img {
+				max-width: 400px;
+				border-radius: 10px;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+			}
+
+			.product-info {
+				max-width: 500px;
+			}
+
+			.product-info h1 {
+				margin-bottom: 20px;
+				font-weight: 600;
+			}
+
+			.product-info .price {
+				font-size: 24px;
+				color: #ff6600;
+				margin-bottom: 15px;
+			}
+
+			.product-description {
+				margin-bottom: 20px;
+				line-height: 1.6;
+			}
+
+			.quantity-selector {
+				display: flex;
+				align-items: center;
+				margin-bottom: 20px;
+			}
+
+			.quantity-selector label {
+				margin-right: 10px;
+				font-weight: 500;
+			}
+
+			.quantity-selector input {
+				width: 60px;
+				padding: 8px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+			}
+
+			.add-to-cart-btn {
+				background: #ff6600;
+				color: white;
+				padding: 12px 20px;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				font-weight: bold;
+			}
+
+			.add-to-cart-btn:hover {
+				background: #e55b00;
+			}
+
+			/* Related Products Section */
+			.related-products {
+				padding: 40px;
+				text-align: center;
+			}
+
+			.related-products h2 {
+				margin-bottom: 30px;
+				font-weight: 600;
+			}
+
+			.product-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+				gap: 20px;
+			}
+
+			.product-card {
+				background: #f0f0f0;
+				padding: 15px;
+				border-radius: 10px;
+				text-align: center;
+				transition: transform 0.3s;
+			}
+
+			.product-card:hover {
+				transform: scale(1.05);
+			}
+
+			.product-card img {
+				width: 100%;
+				border-radius: 10px;
+				margin-bottom: 10px;
+			}
+
+			.product-card h3 {
+				margin-bottom: 10px;
+			}
+
+			.product-card p {
+				font-weight: bold;
+				color: #333;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="logo">E-Shop</div>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="products.html">Products</a></li>
+					<li><a href="login.html">Login/Register</a></li>
+					<li><a href="#">Cart</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="product-details-container">
+			<div class="product-image">
+				<img src="https://via.placeholder.com/400" alt="Product Image" />
+			</div>
+			<div class="product-info">
+				<h1>Product Name</h1>
+				<p class="price">UGX 50,000</p>
+				<p class="product-description">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisi
+					est, facilisis ac tellus vitae, egestas pulvinar enim.
+				</p>
+				<div class="quantity-selector">
+					<label for="quantity">Quantity:</label>
+					<input
+						type="number"
+						id="quantity"
+						name="quantity"
+						min="1"
+						value="1" />
+				</div>
+				<button class="add-to-cart-btn">Add to Cart</button>
+			</div>
+		</section>
+
+		<section class="related-products">
+			<h2>Related Products</h2>
+			<div class="product-grid">
+				<div class="product-card">
+					<img src="https://via.placeholder.com/150" alt="Related Product 1" />
+					<h3>Related Product 1</h3>
+					<p>UGX 30,000</p>
+				</div>
+				<div class="product-card">
+					<img src="https://via.placeholder.com/150" alt="Related Product 2" />
+					<h3>Related Product 2</h3>
+					<p>UGX 45,000</p>
+				</div>
+				<div class="product-card">
+					<img src="https://via.placeholder.com/150" alt="Related Product 3" />
+					<h3>Related Product 3</h3>
+					<p>UGX 25,000</p>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<p>&copy; 2024 E-Shop. All rights reserved.</p>
+		</footer>
+
+		<script>
+			/** @format */
+
+			document.addEventListener("DOMContentLoaded", () => {
+				const addToCartBtn = document.querySelector(".add-to-cart-btn");
+
+				addToCartBtn.addEventListener("click", () => {
+					const quantity = document.getElementById("quantity").value;
+					const productName =
+						document.querySelector(".product-info h1").innerText;
+					const price = document.querySelector(".price").innerText;
+
+					alert(`${quantity} x ${productName} added to your cart at ${price}`);
+				});
+			});
+		</script>
+	</body>
+</html>

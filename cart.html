@@ -1,0 +1,64 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cart - E-Shop</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+		<link rel="stylesheet" href="styles/cart.css" />
+		<link rel="stylesheet" href="styles/index.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<img src="images/Nexify (2).png" alt="logo" class="logo" />
+				Nexify
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="products.html">Products</a></li>
+					<li><a href="cart.html">Cart</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="cart-section">
+			<h1>Your Cart</h1>
+			<div class="cart-container">
+				<table class="cart-table">
+					<thead>
+						<tr>
+							<th>Product</th>
+							<th>Price (UGX)</th>
+							<th>Quantity</th>
+							<th>Total (UGX)</th>
+							<th>Remove</th>
+						</tr>
+					</thead>
+					<tbody id="cart-items">
+						<!-- Cart items will be dynamically generated -->
+					</tbody>
+				</table>
+
+				<div class="cart-summary">
+					<h3>Cart Summary</h3>
+					<p>Subtotal: <span id="subtotal">UGX 0</span></p>
+					<button id="checkout-btn">Proceed to Checkout</button>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<p>&copy; 2024 E-Shop. All rights reserved.</p>
+		</footer>
+
+		<script src="java/cart.js"></script>
+	</body>
+</html>

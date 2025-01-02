@@ -1,0 +1,61 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact Us - E-Shop</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+			rel="stylesheet" />
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+		<link rel="manifest" href="site.webmanifest" />
+		<link rel="stylesheet" href="styles/index.css" />
+		<link rel="stylesheet" href="styles/contact.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<img
+					src="images/Nexify (2).png"
+					alt="logo"
+					class="logo"
+					style="width: 150px; height: 150px" />
+				Nexify
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="products.html">Products</a></li>
+					<li><a href="cart.html">Cart</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="contact-section">
+			<h1>Contact Us</h1>
+			<div class="contact-container">
+				<form id="contact-form">
+					<input type="text" id="name" placeholder="Your Name" required />
+					<input type="email" id="email" placeholder="Your Email" required />
+					<input
+						type="tel"
+						id="phone"
+						placeholder="Your Phone Number"
+						required />
+					<textarea id="message" placeholder="Your Message" required></textarea>
+					<button type="submit">Send Message</button>
+				</form>
+				<div id="confirmation-message" class="hidden"></div>
+			</div>
+		</section>
+
+		<footer>
+			<p>&copy; 2024 E-Shop. All rights reserved.</p>
+		</footer>
+
+		<script src="java/contact.js"></script>
+	</body>
+</html>

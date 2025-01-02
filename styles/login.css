@@ -1,0 +1,222 @@
+/** @format */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: #f0f5f9; /* Light background */
+}
+
+/* Header styles */
+header {
+	background-color: white;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 10px 0;
+	position: relative;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.logo {
+	color: #ff6600;
+	height: 150px;
+	width: 150px;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	gap: 20px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #333;
+	font-weight: 500;
+	padding: 8px 15px;
+	transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+	background-color: #ff6600;
+	color: white;
+	border-radius: 5px;
+}
+/* Main container */
+.auth-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	padding: 40px 0;
+	background: linear-gradient(120deg, #ffffff, #f8f9fa); /* Gradient */
+}
+
+/* Form container */
+.form-container {
+	background-color: #fff;
+	padding: 40px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	width: 100%;
+	max-width: 450px;
+	border-radius: 10px;
+	position: relative;
+	animation: glow 1.5s infinite alternate;
+	overflow: hidden;
+}
+
+/* Glowing effect */
+@keyframes glow {
+	from {
+		box-shadow: 0 0 10px #ffe600, 0 0 20px #ffe600, 0 0 30px #ffbf00;
+	}
+	to {
+		box-shadow: 0 0 20px #252422, 0 0 30px #ff5100, 0 0 40px #00aeff;
+	}
+}
+
+/* Form header */
+.form-container .form-header img {
+	width: 80px;
+	display: block;
+	margin: 0 auto 20px;
+}
+
+/* Form toggle buttons */
+.toggle-btns {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 30px;
+}
+
+.toggle-btns button {
+	flex: 1;
+	padding: 10px;
+	font-size: 1.1rem;
+	cursor: pointer;
+	border: none;
+	background-color: #ffe600;
+	color: #333;
+	border-radius: 20px;
+	transition: background-color 0.3s;
+}
+
+.toggle-btns .active {
+	background-color: #ff9d00;
+	color: #fff;
+}
+
+/* Form styling */
+.auth-form {
+	display: none;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.auth-form.active {
+	display: flex;
+}
+
+.auth-form h2 {
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 1.5rem;
+}
+
+.auth-form input,
+.auth-form select {
+	padding: 12px;
+	font-size: 1rem;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	width: 100%;
+	background-color: #fff;
+	outline: none;
+	transition: border-color 0.3s;
+}
+
+/* Glowing effect on input focus */
+.auth-form input:focus,
+.auth-form select:focus {
+	border-color: #ff9d00;
+	box-shadow: 0 0 10px #ff9d009f;
+}
+
+/* Form icons */
+.auth-form .input-icon {
+	position: relative;
+}
+
+.auth-form .input-icon input {
+	padding-left: 35px;
+}
+
+.auth-form .input-icon i {
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	transform: translateY(-50%);
+	color: #ff9d00;
+	font-size: 1.2rem;
+}
+
+/* Button styling */
+.auth-form button {
+	padding: 12px;
+	background-color: #ff9d00;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1.1rem;
+	transition: background-color 0.3s;
+}
+
+.auth-form button:hover {
+	background-color: #ff7400;
+}
+
+.form-footer {
+	text-align: center;
+}
+
+.form-footer span {
+	color: #333;
+	cursor: pointer;
+	font-weight: 600;
+	text-decoration: underline;
+}
+
+.hidden {
+	display: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	header nav ul li {
+		display: block;
+		margin-left: 0;
+		margin-top: 10px;
+	}
+
+	header nav {
+		flex-direction: column;
+	}
+}
